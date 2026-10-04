@@ -169,7 +169,7 @@ const experiences = [
   { period: "2026—", place: "Tencent · QingYun Program", role: "Research Engineer Intern", detail: "Post-training, scientific agents, and evaluation for complex reasoning systems." },
   { period: "2025", place: "Peking University · HMI Lab", role: "Research Assistant", detail: "Reinforcement learning for vision-language models and multimodal benchmark design. Advised by Prof. Shanghang Zhang." },
   { period: "2025", place: "Tsinghua University · NLP Lab", role: "Research Assistant", detail: "Long-text processing and interactive survey generation with modular language-model systems. Advised by Dr. Shuo Wang." },
-  { period: "2025", place: "Harvard University · Embodied-Mind Lab", role: "Research Assistant", detail: "Algorithms for evolving multi-agent systems. Advised by Prof. Yilun Du." },
+  { period: "2026", place: "UC Berkeley", role: "Research Assistant", detail: "Research on intelligent systems and agentic behavior. Advised by Zeyu Zheng." },
   { period: "2025", place: "JoinQuant", role: "Quantitative Research Intern", detail: "Alpha research and reinforcement-learning methods for daily factor discovery." },
 ];
 
