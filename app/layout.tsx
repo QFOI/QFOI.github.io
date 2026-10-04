@@ -18,9 +18,9 @@ const mono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Siyu Lin — Intelligent Systems & Visual Studies";
+const title = "Siyu Lin — Research in Intelligent Systems";
 const description =
-  "The research and visual portfolio of Siyu Lin, a computer science student at Yuanpei College, Peking University.";
+  "Siyu Lin is a Computer Science and Applied Mathematics student at Peking University studying scientific reasoning, agent systems, reinforcement learning, and long-horizon tasks.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://qfoi.github.io"),
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description,
     type: "website",
     url: "https://qfoi.github.io/",
-    images: [{ url: "/og.png", width: 1731, height: 909, alt: "Siyu Lin portfolio" }],
+    images: [{ url: "/og.png", width: 1731, height: 909, alt: "Siyu Lin research portfolio" }],
   },
   twitter: {
     card: "summary_large_image",

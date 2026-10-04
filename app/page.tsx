@@ -139,31 +139,38 @@ const photoIndexById = new Map(gallerySequence.map((photo, index) => [photo.id, 
 const research = [
   {
     no: "01",
-    title: "Science Agent",
-    text: "Exploring agents that reason, use tools, and remain dependable across long scientific workflows.",
-    meta: "Agentic systems · Scientific reasoning",
-    href: "https://github.com/QFOI/Science-Agent",
+    title: "Scientific reasoning",
+    text: "Building evaluation, data, and training systems that help models solve difficult problems grounded in scientific literature and structured knowledge.",
+    meta: "Multimodal reasoning · Chemistry · STEM",
   },
   {
     no: "02",
-    title: "Learning to Optimise",
-    text: "Notes and experiments at the intersection of reinforcement learning, search, and optimisation.",
-    meta: "Reinforcement learning · Optimisation",
-    href: "https://github.com/QFOI/Optimization",
+    title: "Long-horizon agents",
+    text: "Studying how memory, compaction, tool use, and a minimal native harness can make agents more reliable over extended tasks.",
+    meta: "Agent systems · Memory · Task completion",
   },
   {
     no: "03",
-    title: "Distributed Intelligence",
-    text: "Systems for scaling language-model work through decomposition, coordination, and careful evaluation.",
-    meta: "LLM systems · Multi-agent collaboration",
-    href: "https://github.com/QFOI/LLMxMapReduce-v3",
+    title: "Scaling post-training",
+    text: "Exploring reinforcement learning, skill-conditioned training, data selection, and multi-agent interaction as routes to stronger models.",
+    meta: "Reinforcement learning · Post-training · Multi-agent",
   },
 ];
 
-const notes = [
-  { date: "07 · 2026", title: "What makes an agent trustworthy?", tag: "Research note" },
-  { date: "06 · 2026", title: "On attention, memory, and long horizons", tag: "Field note" },
-  { date: "05 · 2026", title: "A small atlas of quiet systems", tag: "Essay" },
+const publications = [
+  { year: "2025", title: "SUPERChem: A Multimodal Reasoning Benchmark in Chemistry", venue: "arXiv preprint · co-first author · under review", href: "https://arxiv.org/abs/2512.01274" },
+  { year: "2025", title: "SEEA-R1: Tree-Structured Reinforcement Fine-Tuning for Self-Evolving Embodied Agents", venue: "NeurIPS 2025 · co-author", href: "https://arxiv.org/abs/2506.21669" },
+  { year: "2025", title: "LLMxMapReduce-V3: Enabling Interactive In-Depth Survey Generation through a MCP-Driven Hierarchically Modular Agent System", venue: "EMNLP 2025 System Demonstration · accepted · co-first author", href: null },
+  { year: "2025", title: "Loong: Synthesize Long Chain-of-Thoughts at Scale through Verifiers", venue: "NeurIPS 2025 Workshop", href: "https://arxiv.org/abs/2509.03059" },
+  { year: "2026", title: "Economy of Minds: Emerging Multi-Agent Intelligence with Economic Interactions", venue: "Under review · co-first author", href: null },
+];
+
+const experiences = [
+  { period: "2026—", place: "Tencent · QingYun Program", role: "Research Engineer Intern", detail: "Post-training, scientific agents, and evaluation for complex reasoning systems." },
+  { period: "2025", place: "Peking University · HMI Lab", role: "Research Assistant", detail: "Reinforcement learning for vision-language models and multimodal benchmark design. Advised by Prof. Shanghang Zhang." },
+  { period: "2025", place: "Tsinghua University · NLP Lab", role: "Research Assistant", detail: "Long-text processing and interactive survey generation with modular language-model systems. Advised by Dr. Shuo Wang." },
+  { period: "2025", place: "Harvard University · Embodied-Mind Lab", role: "Research Assistant", detail: "Algorithms for evolving multi-agent systems. Advised by Prof. Yilun Du." },
+  { period: "2025", place: "JoinQuant", role: "Quantitative Research Intern", detail: "Alpha research and reinforcement-learning methods for daily factor discovery." },
 ];
 
 export default function Home() {
@@ -250,7 +257,7 @@ export default function Home() {
       >
         <span className="entry__wash" aria-hidden="true" />
         <span className="entry__topline">
-          <span>QFOI · ARCHIVE</span>
+          <span>SIYU LIN · RESEARCH</span>
           <span>BEIJING / CN</span>
           <span>MMXXVI</span>
         </span>
@@ -273,7 +280,7 @@ export default function Home() {
           <span className="entry__statement">
             <span className="entry__coordinates">39°54′ N&nbsp;&nbsp; 116°23′ E</span>
             <span className="entry__quote">To look closely<br />is already a form<br />of thinking.</span>
-            <span className="entry__note">Computer science, intelligent systems,<br />and the art of sustained attention.</span>
+        <span className="entry__note">Scientific reasoning, agent systems,<br />and the study of long horizons.</span>
           </span>
         </span>
 
@@ -286,20 +293,20 @@ export default function Home() {
 
       <div className="page" aria-hidden={!entered} inert={!entered ? true : undefined}>
         <header className="nav-shell">
-          <a className="wordmark" href="#introduction" aria-label="Siyu Lin — home">
+          <a className="wordmark" href="#overview" aria-label="Siyu Lin — home">
             <span>SL</span><span className="wordmark__name">Siyu Lin</span>
           </a>
           <nav className="nav" aria-label="Primary navigation">
-            <a href="#introduction">Introduction</a>
+            <a href="#overview">Overview</a>
             <a href="#research">Research</a>
-            <a href="#blogs">Blogs</a>
-            <a href="#gallery">Gallery</a>
+            <a href="#publications">Publications</a>
+            <a href="#visual-notes">Visual notes</a>
             <a href="#contact">Contact</a>
           </nav>
           <a className="cv-link" href="#cv">CV <span aria-hidden="true">↘</span></a>
         </header>
 
-        <section className="hero" id="introduction" aria-labelledby="intro-title">
+        <section className="hero" id="overview" aria-labelledby="intro-title">
           <div className="hero__mosaic" aria-hidden="true">
             {heroStudies.map((study, index) => (
               <figure className={`hero__tile hero__tile--${index + 1}`} key={study.id}>
@@ -310,68 +317,82 @@ export default function Home() {
           <div className="hero__veil" aria-hidden="true" />
           <div className="hero__folio" aria-hidden="true"><span>PORTFOLIO</span><span>NO. 01 — 26</span></div>
           <article className="intro-card">
-            <p className="eyebrow">Introduction · 自序</p>
+            <p className="eyebrow">Research profile · 研究简介</p>
             <h1 id="intro-title">Siyu Lin<span>林思宇</span></h1>
-            <p className="intro-card__lead">I study intelligent systems—how they learn, reason, collaborate, and remain useful over long horizons.</p>
-            <p className="intro-card__body">Computer Science at Yuanpei College, Peking University. I move between research, engineering, and photography, looking for the quiet structure beneath complicated things.</p>
-            <div className="intro-card__interests"><span>INTERESTS</span><p>Agentic AI · Reinforcement Learning · Scientific Discovery · Visual Culture</p></div>
-            <a className="text-link" href="#research">Continue to selected work <span aria-hidden="true">↓</span></a>
+            <p className="intro-card__lead">I study intelligent systems that can reason, use tools, and complete long-horizon tasks.</p>
+            <p className="intro-card__body">I am a Computer Science and Applied Mathematics student at Yuanpei College, Peking University. My work connects scientific reasoning, post-training, reinforcement learning, and multi-agent systems.</p>
+            <div className="intro-card__interests"><span>RESEARCH INTERESTS</span><p>Scientific Reasoning · Agent Systems · Memory · Reinforcement Learning</p></div>
+            <a className="text-link" href="#research">Read the research agenda <span aria-hidden="true">↓</span></a>
           </article>
           <div className="hero__scroll" aria-hidden="true"><span>SCROLL TO DISCOVER</span><span className="hero__scroll-line" /></div>
         </section>
 
         <section className="section research" id="research" aria-labelledby="research-title">
           <div className="section-heading" data-reveal>
-            <p className="eyebrow">01 · Selected enquiries</p>
+            <p className="eyebrow">01 · Research agenda</p>
             <h2 id="research-title">Research</h2>
-            <p className="section-heading__aside">Work in progress, shaped by curiosity and a preference for systems that earn our trust.</p>
+            <p className="section-heading__aside">I work on the training and evaluation of intelligent systems, with a focus on scientific reasoning and reliable long-horizon behavior.</p>
           </div>
           <div className="research-list">
             {research.map((item) => (
-              <a className="research-item" href={item.href} target="_blank" rel="noreferrer" key={item.no} data-reveal>
+              <article className="research-item research-item--static" key={item.no} data-reveal>
                 <span className="research-item__no">{item.no}</span>
                 <span className="research-item__content">
                   <span className="research-item__meta">{item.meta}</span>
                   <strong>{item.title}</strong>
                   <span className="research-item__text">{item.text}</span>
                 </span>
-                <span className="research-item__arrow" aria-hidden="true">↗</span>
-              </a>
+                <span className="research-item__arrow" aria-hidden="true">—</span>
+              </article>
             ))}
           </div>
           <aside className="cv-panel" id="cv" data-reveal>
-            <div><p className="eyebrow">Curriculum vitae</p><h3>Education &amp; focus</h3></div>
+            <div><p className="eyebrow">Curriculum vitae</p><h3>Education &amp; distinctions</h3></div>
             <dl>
-              <div><dt>Present</dt><dd>B.S. candidate · Yuanpei College, Peking University</dd></div>
-              <div><dt>Focus</dt><dd>Computer Science · Intelligent Systems · Reinforcement Learning</dd></div>
-              <div><dt>Based</dt><dd>Beijing, China</dd></div>
+              <div><dt>Degree</dt><dd>B.S. in Computer Science and Applied Mathematics · Yuanpei College, Peking University</dd></div>
+              <div><dt>Expected</dt><dd>June 2027 · GPA 3.81 / 4.00</dd></div>
+              <div><dt>Honour</dt><dd>36th Chinese Chemistry Olympiad final top 50 · selected for national training team</dd></div>
             </dl>
-            <a href="https://github.com/QFOI" target="_blank" rel="noreferrer">View full record on GitHub <span aria-hidden="true">↗</span></a>
+            <a href="mailto:siyu_lin@stu.pku.edu.cn">Request full CV <span aria-hidden="true">↗</span></a>
           </aside>
+          <div className="experience-panel" data-reveal>
+            <div className="experience-panel__heading"><p className="eyebrow">Research experience</p><h3>Where the questions became projects</h3></div>
+            <div className="experience-list">
+              {experiences.map((item) => (
+                <article className="experience-item" key={`${item.place}-${item.role}`}>
+                  <span className="experience-item__period">{item.period}</span>
+                  <div><p>{item.place}</p><h4>{item.role}</h4><span>{item.detail}</span></div>
+                </article>
+              ))}
+            </div>
+          </div>
         </section>
 
-        <section className="section journal" id="blogs" aria-labelledby="blogs-title">
-          <div className="journal__intro" data-reveal>
-            <p className="eyebrow">02 · Notes in the margin</p>
-            <h2 id="blogs-title">Blogs</h2>
-            <p>Short observations from research, reading, and the unfinished work between an idea and a system.</p>
+        <section className="section publications" id="publications" aria-labelledby="publications-title">
+          <div className="section-heading" data-reveal>
+            <p className="eyebrow">02 · Selected publications</p>
+            <h2 id="publications-title">Publications</h2>
+            <p className="section-heading__aside">A working list of papers and systems projects across multimodal reasoning, reinforcement learning, and multi-agent intelligence.</p>
           </div>
-          <div className="journal__entries">
-            {notes.map((entry) => (
-              <article className="journal-entry" key={entry.title} data-reveal>
-                <p><span>{entry.date}</span><span>{entry.tag}</span></p>
-                <h3>{entry.title}</h3>
-                <span className="journal-entry__status">Forthcoming</span>
+          <div className="publication-list">
+            {publications.map((paper, index) => (
+              <article className="publication-item" key={paper.title} data-reveal>
+                <span className="publication-item__number">{String(index + 1).padStart(2, "0")}</span>
+                <span className="publication-item__year">{paper.year}</span>
+                <div className="publication-item__body">
+                  {paper.href ? <a href={paper.href} target="_blank" rel="noreferrer"><h3>{paper.title}</h3><span aria-hidden="true">↗</span></a> : <h3>{paper.title}</h3>}
+                  <p>{paper.venue}</p>
+                </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="gallery" id="gallery" aria-labelledby="gallery-title">
+        <section className="gallery" id="visual-notes" aria-labelledby="gallery-title">
           <div className="gallery__heading" data-reveal>
-            <p className="eyebrow">03 · Photographic archive</p>
+            <p className="eyebrow">03 · Visual notes</p>
             <div><h2 id="gallery-title">Field of View</h2><span className="gallery__chinese">视野之外</span></div>
-            <p>Thirty-nine photographs selected from a larger personal archive, arranged as four movements rather than a chronology.</p>
+            <p>Photography is a quieter parallel practice: an archive of attention, light, and the spaces between observations.</p>
           </div>
 
           {galleryChapters.map((chapter) => (
@@ -413,17 +434,17 @@ export default function Home() {
 
         <section className="contact" id="contact" aria-labelledby="contact-title">
           <div className="contact__number">04</div>
-          <p className="eyebrow">Contact · 会面</p>
-          <h2 id="contact-title">Let’s make time<br />for a good question.</h2>
-          <p className="contact__copy">I welcome thoughtful conversations around intelligent systems, research collaboration, and visual practice.</p>
+          <p className="eyebrow">Contact · 联系</p>
+          <h2 id="contact-title">For a careful<br />research question.</h2>
+          <p className="contact__copy">I welcome conversations about intelligent systems, scientific reasoning, long-horizon agents, and research collaboration.</p>
           <div className="contact__links">
-            <a href="https://github.com/QFOI" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+            <a href="mailto:siyu_lin@stu.pku.edu.cn">siyu_lin@stu.pku.edu.cn <span>↗</span></a>
             <a href="https://www.pku.edu.cn/" target="_blank" rel="noreferrer">Peking University <span>↗</span></a>
           </div>
           <p className="contact__availability"><span /> Beijing · Available by appointment</p>
         </section>
 
-        <footer className="footer"><span>© 2026 SIYU LIN</span><span>BEIJING · CHINA</span><a href="#introduction">RETURN TO STILLNESS ↑</a></footer>
+        <footer className="footer"><span>© 2026 SIYU LIN</span><span>BEIJING · CHINA</span><a href="#overview">RETURN TO OVERVIEW ↑</a></footer>
       </div>
 
       {activePhoto && activePhotoIndex !== null ? (
