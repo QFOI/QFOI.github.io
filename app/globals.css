@@ -4,8 +4,8 @@
   --paper: #ffffff;
   --line: #e3e5e8;
   --blue: #2459d6;
-  --display: var(--font-display), Georgia, "Times New Roman", serif;
-  --body: var(--font-sans), Arial, "Helvetica Neue", sans-serif;
+  --display: Georgia, "Times New Roman", serif;
+  --body: Arial, "Helvetica Neue", sans-serif;
 }
 
 * {
