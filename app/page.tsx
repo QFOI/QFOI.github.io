@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const experiences = [
   {
     period: "2026—",
-    place: "Tencent · RL & STEM Team, Top Talent Program",
+    place: "Tencent Hunyuan · RL & STEM Team, Top Talent Program",
     role: "Research Engineer Intern",
     detail:
       "Focused on enhancing models’ agentic reasoning abilities and exploring new topics in post-training.",
@@ -17,14 +17,14 @@ const experiences = [
   {
     period: "2026",
     place: "UC Berkeley",
-    role: "Visiting Student Scholar",
+    role: "Visiting Student Scholar · advised by Prof. Zeyu Zheng",
     detail:
       "Exploring reinforcement-learning infrastructure and scalable training systems.",
   },
   {
     period: "2025",
     place: "Peking University · HMI Lab",
-    role: "Research Assistant",
+    role: "Research Assistant · advised by Prof. Shanghang Zhang",
     detail:
       "Exploring post-training methods for vision-language-action (VLA) models and agent systems.",
   },
