@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gallery — Siyu Lin",
+  description: "A photography gallery by Siyu Lin.",
+};
+
 const photos = [
   {
     src: "/images/gallery/03.jpg",
