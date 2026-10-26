@@ -8,21 +8,22 @@ export const metadata: Metadata = {
 
 const experiences = [
   {
-    period: "2026—",
+    period: "2026.1—2026.9",
     place: "Tencent Hunyuan · RL & STEM Team, Top Talent Program",
     role: "Research Engineer Intern",
     detail:
       "Focused on enhancing models’ agentic reasoning abilities and exploring new topics in post-training.",
+    detail2: "Participated in the training of Hy3-preview,Hy3,Hy4-preview, and Hy4",
   },
   {
-    period: "2026",
+    period: "2026.9",
     place: "UC Berkeley",
     role: "Visiting Student Scholar · advised by Prof. Zeyu Zheng",
     detail:
       "Exploring reinforcement-learning infrastructure and scalable training systems.",
   },
   {
-    period: "2025",
+    period: "2024.6—present",
     place: "Peking University · HMI Lab",
     role: "Research Assistant · advised by Prof. Shanghang Zhang",
     detail:
@@ -129,6 +130,7 @@ export default function Home() {
                   <h3>{experience.place}</h3>
                   <p>{experience.role}</p>
                   <span>{experience.detail}</span>
+                  {experience.detail2 ? <span>{experience.detail2}</span> : null}
                 </div>
               </article>
             ))}
