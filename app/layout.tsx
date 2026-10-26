@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://qfoi.github.io"),
   title,
   description,
+  verification: {
+    google: "jKZ9-IxHigE77u-V3sW_mup2IlvE_-GpZFKZUUs1pj4",
+  },
   icons: {
     icon: "/images/profile.jpg",
     shortcut: "/images/profile.jpg",
