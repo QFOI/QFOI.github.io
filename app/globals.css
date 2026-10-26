@@ -152,7 +152,7 @@ nav a:hover {
 
 .timeline article {
   display: grid;
-  grid-template-columns: 75px 1fr;
+  grid-template-columns: 100px 1fr;
   gap: 19px;
   padding: 0 0 24px;
   margin: 0 0 24px;
@@ -161,6 +161,10 @@ nav a:hover {
 
 .timeline article:last-child {
   margin-bottom: 0;
+}
+
+.timeline time {
+  white-space: nowrap;
 }
 
 .timeline time,
